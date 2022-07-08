@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+  --cyan: hsl(179, 62%, 43%);
+  --cyan2: hsl(179, 40%, 55%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --Grayish-blue: hsl(218, 22%, 67%);
+  --white: white;
+}
+.cyan-text{
+  color: var(--cyan);
+}
+.yellow-text{
+  color: var(--bright-yellow);
+}
+.gray-text{
+  color: var(--Grayish-blue);
+}
+.white-text{
+  color: var(--white);
+}
+.big-text{
+  font-size: 30px;
+  font-weight: bold;
+}
+.smaller-text{
+  font-size: 13px;
+}
+
+h3{
+  margin: 0 0 20px 0;
+}
+p{
+  margin: 0 0 10px 0;
+  line-height: 25px;
+}
+ul{
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+/*---------------------------------------------*/
+body{
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--light-gray);
+}
+
+main{
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  margin: 0 20px 0 20px;
+  max-width: 310px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.join,
+.sub,
+.why-us{
+  padding: 30px;
+}
+.join{
+  background-color: var(--white);
+  border-radius: 5px 5px 0 0;
+}
+.join h3{
+  font-size: 25px;
+}
+.sub{
+  background-color: var(--cyan);
+  padding-bottom: 20px;
+}
+.why-us{
+  background-color: var(--cyan2);
+  border-radius: 0 0 5px 5px;
+  padding-bottom: 10px;
+}
+.btn{
+  width: 100%;
+  height: 45px;
+  background-color: var(--bright-yellow);
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in
+}
+.btn:hover{
+  background-color: hsl(251, 73%, 54%);
+}
+.btn:active{
+  box-shadow: none;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+/*------------------------------------------------------*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/*-------------------------------------------------------*/
+@media only screen and (min-width: 1080px){
+  .container{
+    grid-template-columns: 1fr 1fr;
+    max-width: 640px;
+    max-height: 480px;
+  }
+  .join{
+    grid-area: 1/ 1/ 2/ 3;
+  }
+  .join h3{
+    margin-top: 20px;
+  }
+  .join p{
+    font-size: 16px;
+  }
+  .sub{
+    border-bottom-left-radius: 5px;
+    padding-bottom: 20px;
+  }
+  .btn{
+    width: 95%;
+  }
+  .why-us{
+    border-radius: 0 0 5px 0;
+  }
+}
